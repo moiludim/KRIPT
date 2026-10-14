@@ -708,12 +708,12 @@ void menu(){
             case 2:
                 std::cin.ignore();
                 decode_file();
-                return;
+                break;
             case 3:
                 std::cin.ignore();
                 std::cout<<"Работа с распределениями"<<std::endl;
                 compare_distributions();
-                return;
+                break;
             case 4:
                 std::cout<<"Выход из программы"<<std::endl;
                 return;
