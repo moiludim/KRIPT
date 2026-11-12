@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <!-- Описание главного окна и его элементов; обработчики кнопок подключаются в MainWindow. -->
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>564</width>
+    <height>479</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Шифр простой подстановки</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <!-- Основная вертикальная компоновка полей выбора файлов и кнопок обработки. -->
+   <layout class="QVBoxLayout" name="mainLayout">
+    <item>
+     <widget class="QLabel" name="inputLabel">
+      <property name="text">
+       <string>Файл с исходным или зашифрованным текстом:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <!-- Поле пути к исходному/зашифрованному тексту и кнопка выбора файла. -->
+     <layout class="QHBoxLayout" name="inputLayout">
+      <item>
+       <widget class="QLineEdit" name="inputPathEdit"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="inputBrowseButton">
+        <property name="text">
+         <string>Обзор...</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QLabel" name="keyLabel">
+      <property name="text">
+       <string>Файл ключа (перестановка алфавита):</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <!-- Поле пути к файлу ключа и кнопка выбора файла. -->
+     <layout class="QHBoxLayout" name="keyLayout">
+      <item>
+       <widget class="QLineEdit" name="keyPathEdit"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="keyBrowseButton">
+        <property name="text">
+         <string>Обзор...</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QLabel" name="alphabetLabel">
+      <property name="text">
+       <string>Алфавит (строчные буквы; слова разделяйте символом _):</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <!-- Поле пути к файлу алфавита и кнопка выбора файла. -->
+     <layout class="QHBoxLayout" name="alphabetLayout">
+      <item>
+       <widget class="QLineEdit" name="alphabetPathEdit"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="alphabetBrowseButton">
+        <property name="text">
+         <string>Обзор...</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QLabel" name="outputLabel">
+      <property name="text">
+       <string>Файл для сохранения результата:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <!-- Поле пути для сохранения результата и кнопка выбора файла. -->
+     <layout class="QHBoxLayout" name="outputLayout">
+      <item>
+       <widget class="QLineEdit" name="outputPathEdit"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="outputBrowseButton">
+        <property name="text">
+         <string>Обзор...</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <!-- Кнопки запуска шифрования и расшифрования. -->
+     <layout class="QHBoxLayout" name="actionLayout">
+      <item>
+       <widget class="QPushButton" name="encryptButton">
+        <property name="text">
+         <string>Зашифровать</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="decryptButton">
+        <property name="text">
+         <string>Расшифровать</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
